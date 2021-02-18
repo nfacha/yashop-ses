@@ -68,6 +68,8 @@ class Mailer extends BaseMailer
      */
     private $_ses;
 
+    private $_viewPath;
+
     /**
      * @return \nfacha\ses\libs\SimpleEmailService SimpleEmailService instance.
      */
@@ -104,4 +106,25 @@ class Mailer extends BaseMailer
         return count($res) > 0;
     }
 
+	/**
+	 * @return string the directory that contains the view files for composing mail messages
+	 * Defaults to '@app/mail'.
+	 */
+	public function getViewPath()
+	{
+		if ($this->_viewPath === null) {
+			$this->setViewPath('@app/mail');
+		}
+
+		return $this->_viewPath;
+	}
+
+	/**
+	 * @param string $path the directory that contains the view files for composing mail messages
+	 * This can be specified as an absolute path or a [path alias](guide:concept-aliases).
+	 */
+	public function setViewPath($path)
+	{
+		$this->_viewPath = Yii::getAlias($path);
+	}
 }
