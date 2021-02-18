@@ -1,6 +1,6 @@
 Amazon ses extension for Yii2
 =============================
-Extension for sending emails via amazon ses. Part of YaShop
+Extension for sending emails via amazon ses. Part of nfacha
 
 Installation
 ------------
@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist ofat/yii2-yashop-ses "*"
+php composer.phar require --prefer-dist nfacha/yii2-yashop-ses "*"
 ```
 
 or add
 
 ```
-"ofat/yii2-yashop-ses": "*"
+"nfacha/yii2-yashop-ses": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -31,7 +31,7 @@ To use this extension, you should configure it in the application configuration 
 'components' => [
     ...
     'mail' => [
-        'class' => 'yashop\ses\Mailer',
+        'class' => 'nfacha\ses\Mailer',
         'access_key' => 'Your access key',
         'secret_key' => 'Your secret key',
         'host' => 'email.us-east-1.amazonaws.com' // not required

@@ -9,7 +9,7 @@
  * 'components' => [
  *     ...
  *     'mail' => [
- *         'class' => 'yashop\ses\Mailer',
+ *         'class' => 'nfacha\ses\Mailer',
  *         'access_key' => 'Your access key',
  *         'secret_key' => 'Your secret key'
  *     ],
@@ -30,9 +30,9 @@
  * @author Vitaliy Ofat <ofatv22@gmail.com>
  */
 
-namespace yashop\ses;
+namespace nfacha\ses;
 
-use yashop\ses\libs\SimpleEmailService;
+use nfacha\ses\libs\SimpleEmailService;
 use Yii;
 use yii\mail\BaseMailer;
 
@@ -41,7 +41,7 @@ class Mailer extends BaseMailer
     /**
      * @var string message default class name.
      */
-    public $messageClass = 'yashop\ses\Message';
+    public $messageClass = 'nfacha\ses\Message';
 
     /**
      * @var string Amazon ses api access key
@@ -64,12 +64,12 @@ class Mailer extends BaseMailer
     public $host = 'email.us-east-1.amazonaws.com';
 
     /**
-     * @var \yashop\ses\libs\SimpleEmailService SimpleEmailService instance.
+     * @var \nfacha\ses\libs\SimpleEmailService SimpleEmailService instance.
      */
     private $_ses;
 
     /**
-     * @return \yashop\ses\libs\SimpleEmailService SimpleEmailService instance.
+     * @return \nfacha\ses\libs\SimpleEmailService SimpleEmailService instance.
      */
     public function getSES()
     {
