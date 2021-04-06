@@ -7,6 +7,10 @@
  * @version v0.9.4
  */
 namespace nfacha\ses\libs;
+
+use DateTime;
+use DateTimeZone;
+
 class SimpleEmailServiceRequest
 {
 	private $ses, $verb, $parameters = array();
